@@ -77,6 +77,16 @@ class FitnessesController < Sinatra::Base
 
   end
 
+  delete '/:id' do
+
+    id = params[:id].to_i
+
+    $fitnesses.delete_at(id)
+
+    redirect '/'
+
+  end
+
   get '/:id/edit' do
 
     id = params[:id].to_i

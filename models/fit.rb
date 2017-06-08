@@ -1,8 +1,8 @@
 class Fit
 
-  def self.ope_connection
+  def self.open_connection
    PG.connect(dname: "forum")
   end
 
-
+ 
 end
