@@ -2,8 +2,8 @@
 
 <% @fitnesses.each do |fitness| %>
 <div>
-  	<h3><a href="/<%= fitness[:id] %>"><%= fitness[:title] %></a></h3>
-  	<p><%= fitness[:body] %></p>
+  	<h3><a href="/<%= fitness.id %>"><%= fitness.title %></a></h3>
+  	<p><%= fitness.body %></p>
 </div>
 <% end %>
 

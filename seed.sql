@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS fitness;
 
-CREATE TABLE fitness (
+CREATE TABLE fits (
 
   id SERIAL PRIMARY KEY,
   first_name VARCHAR(25),
@@ -13,7 +13,6 @@ CREATE TABLE fitness (
 
 );
 
-INSERT INTO fitness (first_name, age, gender, experience, date,  title , body, ) VALUES ('first name', 'age', 'date', 'gender', 'experience','fitness 1' , 'Body text 1');
-INSERT INTO fitness (first_name, age, gender, experience, date,  title , body, ) VALUES ('first name', 'age', 'date', 'gender', 'experience','fitness 2' , 'Body text 2');
-INSERT INTO fitness (first_name, age, gender, experience, date,  title , body, ) VALUES ('first name', 'age', 'date', 'gender', 'experience','fitness 3' , 'Body text 3');
-INSERT INTO fitness (first_name, age, gender, experience, date,  title , body, ) VALUES ('first name', 'age', 'date', 'gender', 'experience','fitness 4' , 'Body text 4');
+INSERT INTO fits (first_name, age, gender, experience, date, title, body) VALUES ('Ricky' , '27' , 'male' , '1 year','09/05/2017', 'diet' , 'how to eat healthy');
+INSERT INTO fits (first_name, age, gender, experience, date,  title , body) VALUES ('first name', 'age' , 'gender' , 'experience', 'date' , 'title' , 'Body text 2');
+

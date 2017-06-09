@@ -1,8 +1,8 @@
-<h1> <%= @fitness[:title] %> </h1>
-<p> <%= @fitness[:body] %> </p>
-<a href=" <%= @fitness[:id] %>/edit">edit fitness</a>
+<h1> <%= @fitness.title %> </h1>
+<p> <%= @fitness.body %> </p>
+<a href=" <%= @fitness.id %>/edit">edit fitness</a>
 
-<form action="<%= @fitness[:id] %>" method="post">
+<form action="<%= @fitness.id %>" method="post">
 
 <input type="hidden" name="_method" value="Delete">
 <input type="submit" name="Delete" >

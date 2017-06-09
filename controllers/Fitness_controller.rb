@@ -32,7 +32,7 @@ class FitnessesController < Sinatra::Base
     
     @title = "forum"
 
-    @fitnesses = $fitnesses
+    @fitnesses = Fit.all
 
     erb :'fitnesses/index'
  
@@ -48,50 +48,51 @@ class FitnessesController < Sinatra::Base
     
     id = params[:id].to_i
 
-    @fitness = $fitnesses[id]
+    @fitness = Fit.find id 
     
     erb :'fitnesses/show'
 
   end
   
   
-  post '/' do
+  # post '/' do
 
-    fitness = {
-      id: $fitnesses.length,
-      title: params[:title],
-      body: params[:body]
-    }
-    $fitnesses.push fitness
-    redirect '/'
+  #   fitness = {
+  #     id: $fitnesses.length,
+  #     title: params[:title],
+  #     body: params[:body]
+  #   }
+  #   $fitnesses.push fitness
+  #   redirect '/'
 
-  end
+  # end
 
-  put '/:id' do
+  # put '/:id' do
 
-   id = params[:id].to_i
-    $fitnesses[id][:title] = params[:title]
-    $fitnesses[id][:body] = params[:body]
+  #  id = params[:id].to_i
 
-    redirect '/'
+  #   [id][:title] = params[:title]
+  #   [id][:body] = params[:body]
 
-  end
+  #   redirect '/'
 
-  delete '/:id' do
+  # end
 
-    id = params[:id].to_i
+  # delete '/:id' do
 
-    $fitnesses.delete_at(id)
+  #   id = params[:id].to_i
 
-    redirect '/'
+  #   $fitnesses.delete_at(id)
 
-  end
+  #   redirect '/'
+
+  # end
 
   get '/:id/edit' do
 
     id = params[:id].to_i
 
-     @fitnesses = $fitnesses[id]
+     @fitnesses = Fit.find id
 
     erb :'fitnesses/edit'
 
