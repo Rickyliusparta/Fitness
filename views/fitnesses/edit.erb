@@ -1,15 +1,40 @@
-<form action="/<%= @fitnesses.id %>" method="post">
+<form action="/<%= @fitness.id %>" method="post">
 
-<input type="hidden" name="_method" value="put">
+  <input type="hidden" name="_method" value="put">
 
   <div>
     <label>Title</label>
-    <input type="text" name="title" placeholder=" Enter Title" value = " <%= @fitnesses.title %>">
+    <input type="text" name="title" placeholder=" Enter Title" value = " <%= @fitness.title %>">
+  </div>
+
+  <div>
+    <label>first name</label>
+    <input type="text" name="first_name" value="<%= @fitness.first_name %>">
+  </div>
+
+  <div>
+    <label>AGE</label>
+    <input type="number" name="age" value="<%= @fitness.age %>">
+  </div>
+
+  <div>
+    <label for="gender">Gender</label>
+    <input type="text" name="gender" value=" <%= @fitness.gender %>">
+  </div>
+
+  <div>
+    <label for="experience">Years of Expeience</label>
+    <input type="text" name="experience" value=" <%= @fitness.experience %>">
+  </div>
+
+  <div>
+    <label for="date">Start Date</label>
+    <input type="date" name="date" value=" <%= @fitness.date %>">
   </div>
 
   <div>
     <label>Body</label>
-    <textarea name="body"><%= @fitnesses.body %></textarea>
+    <textarea name="body"><%= @fitness.body %></textarea>
   </div>
 
   <div>

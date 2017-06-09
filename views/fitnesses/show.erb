@@ -1,5 +1,11 @@
 <h1> <%= @fitness.title %> </h1>
 <p> <%= @fitness.body %> </p>
+<h5> <%= @fitness.first_name %> </h5>
+<p> <%= @fitness.age %> </p>
+<p> <%= @fitness.gender %> </p>
+<p> <%= @fitness.experience %> </p>
+<p> <%= @fitness.date %> </p>
+
 <a href=" <%= @fitness.id %>/edit">edit fitness</a>
 
 <form action="<%= @fitness.id %>" method="post">

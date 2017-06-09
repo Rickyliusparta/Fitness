@@ -1,9 +1,16 @@
 <h1>Welcome to fit</h1>
 
-<% @fitnesses.each do |fitness| %>
+<% @fitness.each do |fitness| %>
 <div>
-  	<h3><a href="/<%= fitness.id %>"><%= fitness.title %></a></h3>
-  	<p><%= fitness.body %></p>
+  <h3><a href="/<%= fitness.id %>"><%= fitness.title %></a></h3>
+  <p><%= fitness.body %></p>
+  <p><%= fitness.first_name %></p>
+  <p><%= fitness.age %></p>
+  <p><%= fitness.gender %></p>
+  <p><%= fitness.experience %></p>
+  <p><%= fitness.date %></p>
+
 </div>
+
 <% end %>
 

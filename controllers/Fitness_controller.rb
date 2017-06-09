@@ -11,28 +11,11 @@ class FitnessesController < Sinatra::Base
   end
 
 
-  $fitnesses = [{
-    id: 0,
-    title: "Easy Cardio",
-    body: "ways to do cardio"
- },
- {
-    id: 1,
-    title:"Body Mass",
-    body: "increase mass in weeks"
- },
- {
-    id: 2,
-    title: "diet",
-    body: "ways to eat healthy without gaining fat"
-  
-  }];
-
   get '/' do
     
     @title = "forum"
 
-    @fitnesses = Fit.all
+    @fitness = Fit.all
 
     erb :'fitnesses/index'
  
@@ -55,28 +38,35 @@ class FitnessesController < Sinatra::Base
   end
   
   
-  # post '/' do
+  post '/' do
 
-  #   fitness = {
-  #     id: $fitnesses.length,
-  #     title: params[:title],
-  #     body: params[:body]
-  #   }
-  #   $fitnesses.push fitness
-  #   redirect '/'
+    fitness = Fit.new
+      fitness.first_name = params[:first_name]
+      fitness.age = params[:age]
+      fitness.gender = params[:gender]
+      fitness.experience = params[:experience]
+      fitness.date = params[:date]
+      fitness.title = params[:title]
+      fitness.body = params[:body]
+      fitness.save
+      redirect '/'
 
-  # end
+  end
 
-  # put '/:id' do
+  put '/:id'  do
+    id = params[:id].to_i
+    fitness = Fit.find id
+    fitness.first_name = params[:first_name]
+    fitness.age = params[:age]
+    fitness.gender = params[:gender]
+    fitness.experience = params[:experience]
+    fitness.date = params[:date]
+    fitness.title = params[:title]
+    fitness.body = params[:body]
+    fitness.update 
+    redirect "/"
 
-  #  id = params[:id].to_i
-
-  #   [id][:title] = params[:title]
-  #   [id][:body] = params[:body]
-
-  #   redirect '/'
-
-  # end
+  end
 
   # delete '/:id' do
 
@@ -92,7 +82,7 @@ class FitnessesController < Sinatra::Base
 
     id = params[:id].to_i
 
-     @fitnesses = Fit.find id
+     @fitness = Fit.find id
 
     erb :'fitnesses/edit'
 

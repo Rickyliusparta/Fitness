@@ -40,14 +40,14 @@ class Fit
   end
 
   def save 
-    conn = Fit.open_connection
-    sql = "INSERT INTO fits (first_ name, age, gender, experience, date, title , body) VALUES ( '#{self.first_name}', '#{self.age}', '#{self.gender}', '#{self.experience}', '#{self.date}', '#{self.title}', '#{self.body}')"
+    conn = self.open_connection
+    sql = "INSERT INTO fits (first_name,age,gender,experience,date,title,body) VALUES ( '#{self.first_name}', '#{self.age}', '#{self.gender}', '#{self.experience}', '#{self.date}', '#{self.title}', '#{self.body}')"
     conn.exec(sql)
   end
 
   def update
-    conn = Fit.open_connection
-    sql = "UPDATE fits SET first_name='#{self.first_name}', age='#{self.age}',gender='#{self.gender}', experience='#{self.experience}', date='#{self.date}', title='#{self.title}', body='#{self.body}' WHERE id = #{self.id}"
+    conn = self.open_connection
+    sql = "UPDATE fits SET first_name='#{self.first_name}', age=#{self.age} , gender='#{self.gender}', experience='#{self.experience}', date=#{self.date}, title='#{self.title}', body='#{self.body}' WHERE id = #{self.id}"
     conn.exec(sql)
   end
 
