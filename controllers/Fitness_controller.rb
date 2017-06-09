@@ -1,4 +1,5 @@
 class FitnessesController < Sinatra::Base
+  
 
   # sets root as the parent-directory of the current file
   set :root, File.join(File.dirname(__FILE__), '..')
@@ -41,15 +42,15 @@ class FitnessesController < Sinatra::Base
   post '/' do
 
     fitness = Fit.new
-      fitness.first_name = params[:first_name]
-      fitness.age = params[:age]
-      fitness.gender = params[:gender]
-      fitness.experience = params[:experience]
-      fitness.date = params[:date]
-      fitness.title = params[:title]
-      fitness.body = params[:body]
-      fitness.save
-      redirect '/'
+    fitness.first_name = params[:first_name]
+    fitness.age = params[:age] ? params[:age] : 0
+    fitness.gender = params[:gender]
+    fitness.experience = params[:experience]
+    fitness.date = params[:date] ? params[:date] : 0
+    fitness.title = params[:title]
+    fitness.body = params[:body]
+    fitness.save
+    redirect '/'
 
   end
 
@@ -68,15 +69,15 @@ class FitnessesController < Sinatra::Base
 
   end
 
-  # delete '/:id' do
+  delete '/:id' do
 
-  #   id = params[:id].to_i
+    id = params[:id].to_i
 
-  #   $fitnesses.delete_at(id)
+    Fit.destroy id
 
-  #   redirect '/'
+    redirect '/'
 
-  # end
+  end
 
   get '/:id/edit' do
 

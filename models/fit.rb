@@ -1,5 +1,6 @@
 class Fit
   attr_accessor :id, :first_name, :age, :gender, :experience, :title, :date, :body
+
   def self.open_connection
     PG.connect(dbname:"forum")
   end
@@ -20,7 +21,6 @@ class Fit
 
   end
 
-  # INDEX
   def self.all
     conn = self.open_connection
     sql = "SELECT id,first_name,age,gender,experience,date,title,body FROM fits ORDER BY id"
@@ -40,14 +40,14 @@ class Fit
   end
 
   def save 
-    conn = self.open_connection
+    conn = Fit.open_connection
     sql = "INSERT INTO fits (first_name,age,gender,experience,date,title,body) VALUES ( '#{self.first_name}', '#{self.age}', '#{self.gender}', '#{self.experience}', '#{self.date}', '#{self.title}', '#{self.body}')"
     conn.exec(sql)
   end
 
   def update
-    conn = self.open_connection
-    sql = "UPDATE fits SET first_name='#{self.first_name}', age=#{self.age} , gender='#{self.gender}', experience='#{self.experience}', date=#{self.date}, title='#{self.title}', body='#{self.body}' WHERE id = #{self.id}"
+    conn = Fit.open_connection
+    sql = "UPDATE fits SET first_name='#{self.first_name}', age='#{self.age}' , gender='#{self.gender}', experience='#{self.experience}', date='#{self.date}', title='#{self.title}', body='#{self.body}' WHERE id = '#{self.id}'"
     conn.exec(sql)
   end
 
