@@ -17,3 +17,12 @@
 	margin-left: 35px;
 	font-family: monospace;
 }
+
+#runpic{
+	height: 100px;
+	width: 160px;
+	display: inline-block;
+	float: right;
+	margin-right: 40px;
+	margin-top: -200px;
+}
