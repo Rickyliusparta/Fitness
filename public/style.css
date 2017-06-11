@@ -1,16 +1,19 @@
 .header{
 	text-align: center;
-	color: red;
+	color: #2196F3;
 
-
+}
+#new{
+	font-family: monospace;
 }
 
 .card-block{
 	border: solid black 3px;
 	background-color: rgba(42, 42, 253, 0.18);
-
 }
 
 #form{
-	display: inline-block;
+	display: table-caption;
+	margin-left: 35px;
+	font-family: monospace;
 }
