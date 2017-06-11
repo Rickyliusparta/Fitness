@@ -1,6 +1,5 @@
 .header{
-
-text-align: center;
+	text-align: center;
 
 
 }
@@ -11,3 +10,7 @@ text-align: center;
 
 }
 
+#fit{
+    height: 70px;
+    width: 50px;
+}
