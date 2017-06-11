@@ -2,15 +2,29 @@
 
 <% @fitness.each do |fitness| %>
 <div>
-  <h3><a href="/<%= fitness.id %>"><%= fitness.title %></a></h3>
-  <p><%= fitness.body %></p>
-  <p><%= fitness.first_name %></p>
-  <p><%= fitness.age %></p>
-  <p><%= fitness.gender %></p>
-  <p><%= fitness.experience %></p>
-  <p><%= fitness.date %></p>
+  
+	  <p><%= fitness.first_name %></p>
+	  <p><%= fitness.age %></p>
+	  <p><%= fitness.gender %></p>
+	  <p><%= fitness.experience %></p>
+	  <p><%= fitness.date %></p>
 
-</div>
+
+
+
+
+	<div class="row">
+	  <div class="col-sm-6">
+	    <div class="card">
+	      <div class="card-block">
+	        <h3><a href="/<%= fitness.id %>"><%= fitness.title %></a></h3>
+	  
+	        <p class="card-text"><%= fitness.body %></p>
+	        <a href="/<%= fitness.id %>" class="btn btn-primary"><%= fitness.first_name %></a>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+</div>	
 
 <% end %>
-
