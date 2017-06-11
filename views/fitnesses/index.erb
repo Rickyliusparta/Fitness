@@ -1,24 +1,12 @@
-<h1>Welcome to fit</h1>
+<h1 class="header">Welcome to Fit</h1>
 
 <% @fitness.each do |fitness| %>
 <div>
-  
-	  <p><%= fitness.first_name %></p>
-	  <p><%= fitness.age %></p>
-	  <p><%= fitness.gender %></p>
-	  <p><%= fitness.experience %></p>
-	  <p><%= fitness.date %></p>
-
-
-
-
-
-	<div class="row">
+  	<div class="row">
 	  <div class="col-sm-6">
 	    <div class="card">
 	      <div class="card-block">
 	        <h3><a href="/<%= fitness.id %>"><%= fitness.title %></a></h3>
-	  
 	        <p class="card-text"><%= fitness.body %></p>
 	        <a href="/<%= fitness.id %>" class="btn btn-primary"><%= fitness.first_name %></a>
 	      </div>
@@ -26,5 +14,6 @@
 	  </div>
 	</div>
 </div>	
+
 
 <% end %>

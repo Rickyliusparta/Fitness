@@ -1,3 +1,13 @@
-.new-row: {
-	display: inline-block;
+.header{
+
+text-align: center;
+
+
 }
+
+.card-block{
+	border: solid black 2px;
+	background-color: rgba(42, 42, 253, 0.18);
+
+}
+
