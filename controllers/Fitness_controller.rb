@@ -26,15 +26,19 @@ class FitnessesController < Sinatra::Base
     
     erb :'fitnesses/new'
   
+      # "NEW" 
+
   end
 
- get '/:id' do
+  get '/:id' do
     
     id = params[:id].to_i
 
     @fitness = Fit.find id 
     
     erb :'fitnesses/show'
+
+    
 
   end
   
@@ -46,12 +50,13 @@ class FitnessesController < Sinatra::Base
     fitness.age = params[:age] ? params[:age] : 0
     fitness.gender = params[:gender]
     fitness.experience = params[:experience]
-    fitness.date = params[:date] ? params[:date] : 0
+    fitness.date = params[:date]
     fitness.title = params[:title]
     fitness.body = params[:body]
     fitness.save
     redirect '/'
 
+    # CREATE
   end
 
   put '/:id'  do
@@ -66,6 +71,8 @@ class FitnessesController < Sinatra::Base
     fitness.body = params[:body]
     fitness.update 
     redirect "/"
+
+    # update
 
   end
 
