@@ -1,15 +1,16 @@
 .header{
 	text-align: center;
+	color: red;
 
 
 }
 
 .card-block{
-	border: solid black 2px;
+	border: solid black 3px;
 	background-color: rgba(42, 42, 253, 0.18);
 
 }
 
-.fit{
-	height: 100px;
+#form{
+	display: inline-block;
 }
