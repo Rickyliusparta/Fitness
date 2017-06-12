@@ -31,5 +31,11 @@
 }
 
 #delete{
-	
+	position: relative;
+	margin-left: 140px;
+}
+
+upload{
+	max-height: : 50px;
+	max-width: 50px;
 }
