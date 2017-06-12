@@ -5,13 +5,14 @@
 <p> <%= @fitness.gender %> </p>
 <p> <%= @fitness.experience %> </p>
 <p> <%= @fitness.date %> </p>
+<P> <%= @fitness.file %> </P>
 
 <a href=" <%= @fitness.id %>/edit">Edit Post</a>
 
 <form action="<%= @fitness.id %>" method="post">
 
 
-<div>
+<div id="delete>
 	<input type="hidden" name="_method" value="Delete">
 	<input type="submit" name="Delete" value="Delete" >	
 </div>
