@@ -5,9 +5,11 @@
 </div>
 
 <% @fitness.each do |fitness| %>
+
 <div>
-	 <div class="col-sm-6">
-	    <div class="card">
+  <!-- 	<div class="row"> -->
+	  <div class="col-sm-6">
+	    <!-- <div class="card"> -->
 	      <div class="card-block">
 	        <h3><a href="/<%= fitness.id %>"><%= fitness.title %></a></h3>
 	        <p class="card-text"><%= fitness.body %></p>
@@ -15,8 +17,19 @@
 	        <img class="upload" src="/<%= fitness.file %>">
 	      </div>
 	    </div>
-	  </div>
+	  <!-- </div> -->
+	<!-- </div> -->
 </div>	
 
+
+<!-- <aside class="ads">
+	<div>
+		<p>Stay fit</p>
+
+	</div>
+
+
+
+</aside> -->
 
 <% end %>
