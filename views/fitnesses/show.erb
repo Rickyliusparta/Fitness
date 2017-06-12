@@ -10,15 +10,12 @@
 
 <form action="<%= @fitness.id %>" method="post">
 
-<input type="hidden" name="_method" value="Delete">
-<input type="submit" name="Delete" value="Delete" >	
 
+<div>
+	<input type="hidden" name="_method" value="Delete">
+	<input type="submit" name="Delete" value="Delete" >	
+</div>
 
 </form>
 
-<form method ='POST' action = '/' enctype='multipart/form-data'>
-    <label>File</label>
-    <textarea name="too_file" placeholder="enter file"></textarea>    
-    <input type="file" name="tfile">
-    <input type="submit" value='Did It!'>
-</form>
+
