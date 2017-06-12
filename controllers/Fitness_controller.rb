@@ -6,6 +6,7 @@ class FitnessesController < Sinatra::Base
   
   # sets the view directory correctly
   set :views, Proc.new { File.join(root, "views") } 
+  set :public_folder, Proc.new { File.join(root, "public_folder") } 
 
   configure :development do
       register Sinatra::Reloader
@@ -17,6 +18,7 @@ class FitnessesController < Sinatra::Base
     @title = "forum"
 
     @fitness = Fit.all
+
 
     erb :'fitnesses/index'
  
@@ -35,6 +37,8 @@ class FitnessesController < Sinatra::Base
     id = params[:id].to_i
 
     @fitness = Fit.find id 
+
+   
     
     erb :'fitnesses/show'
 
@@ -52,9 +56,15 @@ class FitnessesController < Sinatra::Base
     fitness.experience = params[:experience]
     fitness.date = params[:date]
     fitness.title = params[:title]
-    fitness.body = params[:body]
+    fitness.body = params[:body]  
+    fitness.file = params[:tfile][:filename]
     fitness.save
-    redirect '/'
+
+     File.open('public/' + params[:tfile][:filename], "w") do |f|
+        f.write(params[:tfile][:tempfile].read)
+     redirect '/' 
+
+  end      
 
     # CREATE
   end

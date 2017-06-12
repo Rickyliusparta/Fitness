@@ -15,9 +15,9 @@ class TrainingsController < Sinatra::Base
 
      @title = "forum"
 
-    @fitness = Fit.all
+    @trainings = Fit.all
 
-    erb :'fitnesses/index'
+    erb :'trainings/index'
   end
 
 end

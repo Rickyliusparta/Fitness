@@ -1,6 +1,6 @@
 <h1 id="new">Create Your New Post</h1>
 
-<form id="form" method="post" action="/">
+<form id="form" method="post" action="/" enctype='multipart/form-data'>
     <div>
         <label for="first_name">First name</label>
         <input type="text" name="first_name">
@@ -36,11 +36,20 @@
         <textarea name="body"></textarea>
     </div>
     
-    <input type="submit" name="save post">
+   
+
+
+<!-- <form method ='POST' action = '/' > -->
+    <label>File</label>
+    <textarea name="too_file" placeholder="enter file"></textarea>    
+    <input type="file" name="tfile">
+<!--     <input type="submit" value='Did It!'>
+ -->
+     <input type="submit" name="save post">
 </form>
 
-<div>
+<!-- <div>
     <input type='file' id="imgInp" onchange="readFile(this);">
         <img id="pic" src="imgInp">
 
-</div>
+</div> -->

@@ -6,7 +6,7 @@
 <p> <%= @fitness.experience %> </p>
 <p> <%= @fitness.date %> </p>
 
-<a href=" <%= @fitness.id %>/edit">edit fitness</a>
+<a href=" <%= @fitness.id %>/edit">Edit Post</a>
 
 <form action="<%= @fitness.id %>" method="post">
 
@@ -14,4 +14,11 @@
 <input type="submit" name="Delete" value="Delete" >	
 
 
+</form>
+
+<form method ='POST' action = '/' enctype='multipart/form-data'>
+    <label>File</label>
+    <textarea name="too_file" placeholder="enter file"></textarea>    
+    <input type="file" name="tfile">
+    <input type="submit" value='Did It!'>
 </form>

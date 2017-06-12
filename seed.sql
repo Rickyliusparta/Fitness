@@ -3,13 +3,13 @@ DROP TABLE IF EXISTS fitness;
 CREATE TABLE fits (
 
   id SERIAL PRIMARY KEY,
-  first_name VARCHAR(25) NOT NULL,
-  age	 NUMERIC NOT NULL,
-  gender VARCHAR(7) NOT NULL,
-  experience  TEXT NOT NULL, 
-  date	 DATE NOT NULL,
-  title  VARCHAR(50) NOT NULL,
-  body  TEXT NOT NULL
+  first_name VARCHAR(25) NULL,
+  age	 NUMERIC NULL,
+  gender VARCHAR(7) NULL,
+  experience  TEXT NULL, 
+  date	 DATE NULL,
+  title  VARCHAR(50) NULL,
+  body  TEXT NULL
 
 );
 

@@ -13,16 +13,17 @@
 	        <h3><a href="/<%= fitness.id %>"><%= fitness.title %></a></h3>
 	        <p class="card-text"><%= fitness.body %></p>
 	        <a href="/<%= fitness.id %>" class="btn btn-primary"><%= fitness.first_name %></a>
+	        <img src="/<%= fitness.file %>">
 	      </div>
 	    </div>
 	  </div>
 	</div>
 </div>	
 
-<div>
+<!-- <div>
 	<input type='file' id="imgInp" onchange="readFile(this);" />
         <img id="pic" src="imgInp" alt="your image" />
 
-</div>
+</div> -->
 
 <% end %>
