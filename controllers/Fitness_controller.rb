@@ -58,7 +58,7 @@ class FitnessesController < Sinatra::Base
     fitness.first_name = params[:first_name]
     fitness.age = params[:age].length != 0 ? params[:age] : 0
     fitness.gender = params[:gender]
-    fitness.experience = params[:experience]
+    fitness.experience = params[:experience].length != 0 ? params[:experience] : 0
     fitness.date = params[:date].length != 0 ? params[:date] : '01-01-1970'
     fitness.title = params[:title]
     fitness.body = params[:body]  
