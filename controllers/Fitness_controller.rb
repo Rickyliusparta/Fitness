@@ -38,6 +38,9 @@ class FitnessesController < Sinatra::Base
 
     @fitness = Fit.find id 
 
+    fitness = Fit.new
+    fitness.body = params[:body]
+
     
     erb :'fitnesses/show'
 
@@ -51,17 +54,19 @@ class FitnessesController < Sinatra::Base
     fitness.age = params[:age].length != 0 ? params[:age] : 0
     fitness.gender = params[:gender]
     fitness.experience = params[:experience]
-    fitness.date = Date.parse(params[:date]) rescue nil ? params[:date] : Date.new
+    fitness.date = params[:date].length != 0 ? params[:date] : '01-01-1970'
     fitness.title = params[:title]
     fitness.body = params[:body]  
-    fitness.file = params[:tfile][:filename]
+    file = params[:tfile][:filename] if params[:tfile]
+    fitness.file = file
     fitness.save
 
-     File.open('public/' + params[:tfile][:filename], "w") do |f|
-        f.write(params[:tfile][:tempfile].read)
-     redirect '/' 
-
-     end      
+    if params[:tfile]
+      File.open('public/' + file, "w") do |f|
+        f.write(params[:tfile][:tempfile].read) 
+      end
+    end      
+    redirect '/' 
 
     # CREATE
   end
