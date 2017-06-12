@@ -32,6 +32,11 @@ class FitnessesController < Sinatra::Base
 
   end
 
+  get '/training' do
+    erb :"training/show" 
+
+  end
+
   get '/:id' do
     
     id = params[:id].to_i
