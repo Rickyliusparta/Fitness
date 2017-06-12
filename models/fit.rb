@@ -6,6 +6,7 @@ class Fit
   end
 
   def self.hydrate fit_data
+    puts fit_data
 
     fit = Fit.new 
     fit.id = fit_data['id']

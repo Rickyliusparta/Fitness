@@ -10,3 +10,4 @@ require_relative './controllers/training_controller.rb'
 use Rack::MethodOverride
 
 run FitnessesController
+# run training_controller

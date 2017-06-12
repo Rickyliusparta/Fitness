@@ -1,32 +1,27 @@
-class TrainingsController < Sinatra::Base
+# class TrainingsController < Sinatra::Base
   
 
-  # sets root as the parent-directory of the current file
-  set :root, File.join(File.dirname(__FILE__), '..')
+#   # sets root as the parent-directory of the current file
+#   set :root, File.join(File.dirname(__FILE__), '..')
   
-  # sets the view directory correctly
-  set :views, Proc.new { File.join(root, "views/training") } 
+#   # sets the view directory correctly
+#   set :views, Proc.new { File.join(root, "views") } 
+#   set :public_folder, Proc.new { File.join(root, "public") } 
 
-  configure :development do
-      register Sinatra::Reloader
-  end
 
-  get '/training' do
+#   configure :development do
+#       register Sinatra::Reloader
+#   end
 
-     @title = "forum"
 
-    @trainings = Fit.all
+#   get "/training" do
 
-    erb :'trainings/index'
-  end
 
-  get "/:id" do
+# "hello"
 
-    id - params[:id].to_i
+#   end
 
-    @fitness = Fit.find id
 
-    erb :'trainings/show'
-  end
-end
+
+# end
 

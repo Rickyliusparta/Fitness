@@ -24,7 +24,7 @@ class FitnessesController < Sinatra::Base
  
   end
 
-  get '/new' do
+  get '/fitnesses/new' do
     
     erb :'fitnesses/new'
   
@@ -32,7 +32,7 @@ class FitnessesController < Sinatra::Base
 
   end
 
-  get '/:id' do
+  get '/fitness/:id' do
     
     id = params[:id].to_i
 
