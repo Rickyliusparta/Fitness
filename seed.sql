@@ -9,7 +9,8 @@ CREATE TABLE fits (
   experience  TEXT NULL, 
   date	 DATE NULL,
   title  VARCHAR(50) NULL,
-  body  TEXT NULL
+  body  TEXT NULL,
+  file VARCHAR(50) NULL
 
 );
 

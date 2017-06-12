@@ -59,7 +59,7 @@ class FitnessesController < Sinatra::Base
     fitness.body = params[:body]  
     fitness.file = params[:tfile][:filename]
     fitness.save
-
+    
      File.open('public/' + params[:tfile][:filename], "w") do |f|
         f.write(params[:tfile][:tempfile].read)
      redirect '/' 

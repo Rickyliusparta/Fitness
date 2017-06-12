@@ -1,6 +1,5 @@
 require 'sinatra'
 require 'pg'
-
 require 'sinatra/reloader' if development?
 require 'pry'
 require_relative './models/fit.rb'
