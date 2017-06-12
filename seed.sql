@@ -10,7 +10,12 @@ CREATE TABLE fits (
   date	 DATE NULL,
   title  VARCHAR(50) NULL,
   body  TEXT NULL,
-  file VARCHAR(50) NULL
+  file VARCHAR(100) NULL,
+  postcode TEXT NULL,
+  longitude FLOAT NULL,
+  latitude FLOAT NULL
+
+
 
 );
 
