@@ -19,10 +19,14 @@
 }
 
 .box{
-	float: right;
+	float: 
 }
 
-
+#pic{
+	float: right;
+    margin-top: -662px;
+    margin-left: -15px;
+}
 
 #runpic{
 	height: 100px;
@@ -47,21 +51,13 @@
 	float: left;
 }
 
-.index{
-
-}
-
 .ads{
 	float: right;
 }
 
-.row{
-	margin-right: 100px;
-
-}
 
 .btn-btn-primary{
-	width: 150px;
+	/*width: 150px;*/
 	float: right;
 
 }
@@ -72,6 +68,8 @@
 }
 
 
-
+.section{
+	background-color: blue;
+}
 
 
