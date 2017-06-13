@@ -97,4 +97,6 @@ ul{
 	margin-left: -35px;
     color: blue;
 }
-
+.navbar-nav {
+	margin-left: 0px;
+}
