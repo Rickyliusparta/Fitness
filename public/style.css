@@ -97,6 +97,16 @@ ul{
 	margin-left: -35px;
     color: blue;
 }
+
+#map{
+	margin-left: -1px;
+    margin-top: 75px;
+}
+
 .navbar-nav {
 	margin-left: 0px;
+}
+
+#training{
+
 }

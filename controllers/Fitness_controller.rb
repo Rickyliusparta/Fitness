@@ -86,7 +86,7 @@ class FitnessesController < Sinatra::Base
     fitness.date = params[:date].length != 0 ? params[:date] : '01-01-1970'
     fitness.title = params[:title][:filename] if params[:tfile]
     fitness.body = params[:body]
-    fitness.file = file
+    # fitness.file = file
     fitness.update 
     redirect "/"
 
