@@ -1,12 +1,14 @@
-<h1> <%= @fitness.title %> </h1>
-<p> <%= @fitness.body %> </p>
-<h5> <%= @fitness.first_name %> </h5>
-<p> <%= @fitness.age %> </p>
-<p> <%= @fitness.gender %> </p>
-<p> <%= @fitness.experience %> </p>
-<p> <%= @fitness.date %> </p>
-<P> <%= @fitness.file %></P>
 
+<h5 class="s1"> <%= @fitness.first_name %> </h5>
+<p class="s1"> <%= @fitness.age %> </p>
+<p class="s1"> <%= @fitness.gender %> </p>
+<p class="s1"> <%= @fitness.experience %> </p>
+<p class="s1"> <%= @fitness.date %> </p>
+
+<div>
+	<h1> <%= @fitness.title %> </h1>
+	<p> <%= @fitness.body %> </p>
+</div>
 
 <form>
 	<label>Comments</label>
@@ -14,7 +16,6 @@
 	<textarea name="body"></textarea>
 
 </form>
-
 
 
 <a href=" <%= @fitness.id %>/edit">Edit Post</a>
