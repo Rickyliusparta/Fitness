@@ -11,12 +11,18 @@
 	border: solid black 3px;
 	background-color: rgba(42, 42, 253, 0.18);
 }
-
+/*NEW.erb Styling*/
 #form{
 	display: table-caption;
-	margin-left: 35px;
+	margin-left: 340px;
 	font-family: monospace;
 }
+
+.box{
+	float: right;
+}
+
+
 
 #runpic{
 	height: 100px;
@@ -59,3 +65,13 @@
 	float: right;
 
 }
+
+.navtitle{
+	font-weight: 800;	
+
+}
+
+
+
+
+
