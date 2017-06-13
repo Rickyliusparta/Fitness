@@ -36,9 +36,13 @@
 }
 
 .upload{
-	max-height: : 50px;
-	max-width: 50px;
-	float: right;
+	max-height: : 200px;
+	max-width: 200px;
+	float: left;
+}
+
+.index{
+
 }
 
 .ads{
@@ -47,5 +51,11 @@
 
 .row{
 	margin-right: 100px;
+
+}
+
+.btn-btn-primary{
+	width: 150px;
+	float: right;
 
 }
