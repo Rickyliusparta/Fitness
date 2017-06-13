@@ -1,9 +1,20 @@
 class Fit
   attr_accessor :id, :first_name, :age, :gender, :experience, :title, :date, :body, :file
 
-  def self.open_connection
-    PG.connect(dbname:"forum")
+    def self.open_connection
+    if ENV['DATABASE_URL']
+      PG.connect({
+        dbname: ENV['DB_NAME'],
+        user: ENV['DB_USER'],
+        password: ENV['DB_PASSWORD'],
+        host: ENV['DB_HOST'],
+        port: ENV['DB_PORT']
+      })
+    else
+      PG.connect(dbname: "forum")
+    end
   end
+  
 
   def self.hydrate fit_data
     puts fit_data
