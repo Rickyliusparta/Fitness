@@ -11,17 +11,37 @@
 	border: solid black 3px;
 	background-color: rgba(42, 42, 253, 0.18);
 }
-/*NEW.erb Styling*/
+
 #form{
 	display: table-caption;
 	margin-left: 340px;
 	font-family: monospace;
 }
 
-.s1{
-	float: 
+#title{
+	margin-left: 290px;
+	text-decoration: underline;
+	
 }
 
+#t2{
+	border: solid;
+	margin-left: 290px;
+}
+
+.container{
+	margin-top: -92px;
+}
+
+#comment{
+	margin-top: 108px;
+    margin-left: 709px;
+}
+
+#body{
+	margin-left: 550px;
+	border: solid;
+}
 #pic{
 	float: right;
     margin-top: -662px;
@@ -72,4 +92,9 @@
 	background-color: blue;
 }
 
+ul{
+	list-style: none;
+	margin-left: -35px;
+    color: blue;
+}
 

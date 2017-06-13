@@ -80,15 +80,23 @@ class FitnessesController < Sinatra::Base
     id = params[:id].to_i
     fitness = Fit.find id
     fitness.first_name = params[:first_name]
-    fitness.age = params[:age]
+    fitness.age = params[:age].length != 0 ? params[:age] : 0
     fitness.gender = params[:gender]
-    fitness.experience = params[:experience]
-    fitness.date = params[:date]
-    fitness.title = params[:title]
+    fitness.experience = params[:experience].length != 0 ? params[:experience] : 0
+    fitness.date = params[:date].length != 0 ? params[:date] : '01-01-1970'
+    fitness.title = params[:title][:filename] if params[:tfile]
     fitness.body = params[:body]
+    fitness.file = file
     fitness.update 
     redirect "/"
 
+    if params[:tfile]
+      File.open('public/' + file, "w") do |f|
+        f.write(params[:tfile][:tempfile].read) 
+    
+      end
+
+    end
     # update
 
   end

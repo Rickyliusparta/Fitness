@@ -1,17 +1,25 @@
-
-<h5 class="s1"> <%= @fitness.first_name %> </h5>
-<p class="s1"> <%= @fitness.age %> </p>
-<p class="s1"> <%= @fitness.gender %> </p>
-<p class="s1"> <%= @fitness.experience %> </p>
-<p class="s1"> <%= @fitness.date %> </p>
-
+<h3>USER INFO:</h3>
 <div>
-	<h1> <%= @fitness.title %> </h1>
-	<p> <%= @fitness.body %> </p>
+	<ul>
+		<h5 class="s1"> User Name: <%= @fitness.first_name %> </h5>
+		<li class="s1"> Age: <%= @fitness.age %> </li>
+		<li class="s1"> Gender: <%= @fitness.gender %> </li>
+		<li class="s1"> Years of experince: <%= @fitness.experience %> </li>
+		<li class="s1"> Date: <%= @fitness.date %> </li>
+	</ul>
 </div>
 
-<form>
-	<label>Comments</label>
+<div class="container">
+	<div id="t2">
+		<h1 id="title"> <%= @fitness.title %> </h1>
+		<p> <%= @fitness.body %> </p>
+	</div>
+</div>
+
+
+
+<form class="comment">
+	<label id="comment">Comments</label>
 	<input type="submit" name="submit">
 	<textarea name="body"></textarea>
 
